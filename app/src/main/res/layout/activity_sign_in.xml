@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:hint="enter your email"
-            android:id="@+id/email"
+            android:id="@+id/emailSi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -25,7 +25,7 @@
     app:passwordToggleEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
             android:hint="enter your password"
-            android:id="@+id/pass"
+            android:id="@+id/passSi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
