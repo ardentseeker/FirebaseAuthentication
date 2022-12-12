@@ -3,6 +3,7 @@ package com.example.firebaseauthentication
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -31,12 +32,12 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
     fun signUpFirfebase(email:String,pass:String){
-        auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener { task->
+        auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener{ task->
             if (task.isSuccessful){
                 Toast.makeText(this,"user have been created",Toast.LENGTH_LONG).show()
                 finish()
             }else{
-                Toast.makeText(this,task.exception.toString(),Toast.LENGTH_LONG).show()
+                Toast.makeText(this,task.exception?.toString(),Toast.LENGTH_LONG).show()
 
             }
         }
